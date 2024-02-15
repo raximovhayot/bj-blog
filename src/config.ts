@@ -34,12 +34,12 @@ export const SOCIALS: SocialObjects = [
     name: "YouTube",
     href: "https://www.youtube.com/@uzinfoweb",
     linkTitle: `${SITE.title} on YouTube`,
-    active: false,
+    active: true,
   },
   {
     name: "Telegram",
     href: "https://t.me/hayotraximov",
     linkTitle: `${SITE.title} on Telegram`,
-    active: false,
+    active: true,
   },
 ];
