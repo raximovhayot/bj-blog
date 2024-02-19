@@ -5,7 +5,7 @@ export const SITE: Site = {
   author: "Hayot",
   desc: "Faqat backend bilan cheklanmaydigan loyiha😉",
   title: "Backend Journey",
-  ogImage: "astropaper-og.jpg",
+  // ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerPage: 5,
   scheduledPostMargin: 15 * 60 * 1000, // 15 minutes
