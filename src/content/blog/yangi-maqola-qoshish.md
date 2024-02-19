@@ -4,7 +4,7 @@ pubDatetime: 2024-02-19T15:40:00Z
 modDatetime: 2024-02-19T15:40:00Z
 title: Yangi maqolani qanday qo'shsak bo'ladi?
 slug: yangi-maqola-qoshish
-featured: true
+featured: false
 draft: false
 tags:
   - docs
