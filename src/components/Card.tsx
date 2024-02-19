@@ -15,7 +15,7 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
     style: { viewTransitionName: slugifyStr(title) },
     className: "text-lg font-medium decoration-dashed hover:underline",
   };
-
+  console.error(title);
   return (
     <li className="my-6">
       <a
