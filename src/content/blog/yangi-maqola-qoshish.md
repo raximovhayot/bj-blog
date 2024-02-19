@@ -1,7 +1,7 @@
 ---
 author: Hayot
-pubDatetime: 2024-02-19T15:40:00Z
-modDatetime: 2024-02-19T15:40:00Z
+pubDatetime: 2024-02-19T03:40:00Z
+modDatetime: 2024-02-19T03:40:00Z
 title: Yangi maqolani qanday qo'shsak bo'ladi?
 slug: yangi-maqola-qoshish
 featured: false
