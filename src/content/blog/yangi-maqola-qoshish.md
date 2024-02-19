@@ -56,8 +56,8 @@ Quyida maqola uchun namunaviy formatter 👇
 ---
 title: Yangi maqolani qanday qo'shsak bo'ladi!
 author: Hayot
-pubDatetime: 2024-02-19T15:40:00Z
-modDatetime: 2024-02-19T16:40:00Z
+pubDatetime: 2024-02-19T03:40:00Z
+modDatetime: 2024-02-19T04:40:00Z
 slug: yangi-maqola-qoshish
 featured: true
 draft: false
