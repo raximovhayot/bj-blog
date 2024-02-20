@@ -18,11 +18,12 @@ export default defineConfig({
   ],
   markdown: {
     remarkPlugins: [
-      remarkToc,
+      [remarkToc, { heading: "Mundarija" }],
       [
         remarkCollapse,
         {
           test: "Mundarija",
+          summary: "Mundarijani ochish",
         },
       ],
     ],
