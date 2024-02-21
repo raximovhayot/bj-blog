@@ -8,6 +8,7 @@ import type { CollectionEntry } from "astro:content";
 import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
+import Author from "../components/Author.astro";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -67,6 +68,7 @@ const layoutProps = {
   </div>
   <main id="main-content">
     <h1 transition:name={slugifyStr(title)} class="post-title">{title}</h1>
+    <Author name={slugifyStr(author)} />
     <Datetime
       pubDatetime={pubDatetime}
       modDatetime={modDatetime}

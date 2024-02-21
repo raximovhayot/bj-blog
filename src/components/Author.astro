@@ -1,0 +1,40 @@
+---
+export interface Props {
+  name: string;
+  size?: "sm" | "lg";
+}
+
+const { name, size = "sm" } = Astro.props;
+---
+
+<li
+  class={`inline-block ${
+    size === "sm" ? "my-1 underline-offset-4" : "my-3 mx-1 underline-offset-8"
+  }`}
+>
+  <!--href={`/authors/${name}/`}-->
+  <a
+    href="#"
+    transition:name={name}
+    class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class={`${size === "sm" ? " scale-75" : "scale-110"}`}
+    >
+      <path
+        d="M4 21a1 1 0 0 0 .24 0l4-1a1 1 0 0 0 .47-.26L21 7.41a2 2 0 0 0 0-2.82L19.42 3a2 2 0 0 0-2.83 0L4.3 15.29a1.06 1.06 0 0 0-.27.47l-1 4A1 1 0 0 0 3.76 21 1 1 0 0 0 4 21zM18 4.41 19.59 6 18 7.59 16.42 6zM5.91 16.51 15 7.41 16.59 9l-9.1 9.1-2.11.52z"
+      ></path>
+    </svg>
+    &nbsp;<span>{name}</span>
+  </a>
+</li>
+
+<style>
+  a {
+    @apply relative underline decoration-dashed hover:-top-0.5 hover:text-skin-accent focus-visible:p-1;
+  }
+  a svg {
+    @apply -mr-5 h-6 w-6 scale-95 text-skin-base opacity-80 group-hover:fill-skin-accent;
+  }
+</style>
