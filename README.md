@@ -9,7 +9,7 @@
 │   │   └── logo.svg
 │   │   └── logo.png
 │   └── favicon.svg
-│   └── astropaper-og.jpg
+│   └── og.jpg
 │   └── robots.txt
 │   └── toggle-theme.js
 ├── src/
