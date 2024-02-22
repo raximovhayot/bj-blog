@@ -44,5 +44,3 @@ Masalan dasturda authentikatsiya qanday qurilishi va qanday talablarga javob ber
 
 OWASP ishlab chiqgan loyihalar dasturiy ta'minotlar xavfsizligini mustahkamlashda muhim ahamiyat kasb etadi. Davom etadigan bo'lsak OWASPning juda ko'plab loyihalar bor, ammo biz ularni sanashni shu yerda yakunlaymiz. OWASP loyihalari bilan batafsil tanishish uchun https://owasp.org/projects/
 saytiga kiring.
-
-_Hozircha shular, xato va kamchiliklar bo'lsa Githubda pull request oching, rahmat!_
