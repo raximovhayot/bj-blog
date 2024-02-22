@@ -1,8 +1,8 @@
 ---
 author: Hayot
-pubDatetime: 2024-02-22T11:06:00Z
+pubDatetime: 2024-02-22T12:47:00Z
 title: OWASP nima?
-slug: owasp-nimadastur
+slug: owasp-nima
 featured: false
 draft: false
 tags:
