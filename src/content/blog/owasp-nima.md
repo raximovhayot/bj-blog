@@ -1,6 +1,6 @@
 ---
 author: Hayot
-pubDatetime: 2024-02-22T13:00:00Z
+pubDatetime: 2024-02-22T1:00:00Z
 title: OWASP nima?
 slug: owasp-nima
 featured: false
