@@ -1,5 +1,5 @@
 ---
-author: Hayot
+author: hayot
 pubDatetime: 2024-02-22T12:47:00Z
 title: OWASP nima?
 slug: owasp-nima
