@@ -14,10 +14,8 @@ description: OWASP va uning loyihalari haqida
 
 ## OWASP
 
-**OWASP** (Open Worldwide Application Security Project) - bu dasturiy ta'minot xavfsizligini oshirish uchun ishlaydigan notijorat tashkilot.
-OWASP o'zida juda ko'plab dasturchilarni, kiberxavfsizlik mutahasislarini yiqqan **community** hisoblanadi. OWASP communityga a'zo bo'lganlar bilan juda ko'plab open source loyihalar, dasturiy ta'minot, dokumentatsiyalar va standartlar ishlab chiqadi.
-Bundan tashqari OWASP ko'plab konferensiyalar, traininglar o'tkazib turadi. OWASP tomonidan ishlab chiqilgan loyihalar, toollar, dokumentatsiyalar, forumlar, maqolalar barchasi tekin va barcha foydalanishi uchun ochiq hisoblanadi. OWASPni asosan korporatsiyalar, fondlar, dasturchilar va valantyorlar xayriya yo'li bilan qo'llab quvvatlaydi.
-Yuqorida aytganimizdek OWASP bu community, siz ham OWASPga qo'shilishingiz mumkin. OWASP haqida batafsil ma'lumot olishni xoxlasangiz va unga qo'shilish uchun https://owasp.org/ saytiga kiring.
+**OWASP** (Open Worldwide Application Security Project) - bu dasturiy ta'minot xavfsizligini oshirish uchun ishlaydigan notijorat tashkilot. OWASP o'zida juda ko'plab dasturchilar, kiberxavfsizlik mutahasislarini o'z ichiga olgan hamkorlik jamoasi hisoblanadi. OWASP hamkorlik jamoasiga a'zo bo'lganlar bilan juda ko'plab open source loyihalar, dasturiy ta'minot, dokumentatsiyalar va standartlar ishlab chiqadi. Bundan tashqari OWASP konferentsiyalar, seminarlar o'tkazib turadi.
+OWASP tomonidan ishlab chiqilgan loyihalar, toollar, dokumentatsiyalar, forumlar, maqolalar barchasi tekin va barcha foydalanishi uchun ochiq hisoblanadi. OWASPni asosan korporatsiyalar, fondlar, dasturchilar va valantyorlar xayriya yo'li bilan qo'llab quvvatlaydi.
 
 ## OWASP Loyihalari
 
@@ -25,23 +23,24 @@ Aytganimizdek OWASP Communitysi juda ko'plab loyihalarni ishlab chiqgan. Siz ham
 
 ### OWASP TOP TEN
 
-**OWASP TOP 10** - bu web ilovalar xavfsizligini oshirish maqsadida ishlab chiqilgan loyiha bo'lib, o'zida web ilovalarda eng ko'p uchraydigan 10 turdagi zaiflikni o'zida jamlagan. _**Ushbu loyiha haqida keyinroq batafsil gaplashamiz**_
+**OWASP TOP 10** -bu web ilovalar xavfsizligini oshirish maqsadida ishlab chiqilgan loyiha bo'lib, o'zida web ilovalarda eng ko'p uchraydigan 10 turdagi zaifliklarni o'z ichiga olgan.
+Ushbu loyiha OWASPning eng ko'p o'qilgan va foydalaniladigan loyihalardan hisoblanadi.
+**_Ushbu loyiha haqida keyinroq batafsil gaplashamiz_**
 
 ### OWASP Application Security Verification Standard
 
-**OWASP Application Security Verification Standard (ASVS)** - web dasturlar va xizmatlarni loyihalash va qurishdagi xavfsizlik standartlari to'plami hisoblanadi. Masalan dasturda authentikatsiya qanday qurilishi va qanday talablarga javob berishi kerakligi yoki dasturdagi foydalanuvchilar qanday parollardan foydalanishi mumkinligi, parollar qanday saqlanishi kerakligini ko'rsatib turuvchi standartlar to'plami.
+**OWASP Application Security Verification Standard (ASVS)** - web dasturlar va xizmatlarni loyihalash va qurishdagi xavfsizlik talablarini aniqlab beruvchi standart. Ushbu standartda dastur xavfsizligini ta'minlash maqsadida qanday talablar qo'yilishi haqida batafsil izoh berilgan.
+Masalan dasturda authentikatsiya qanday qurilishi va qanday talablarga javob berishi kerakligi yoki dasturdagi foydalanuvchilar qanday parollardan foydalanishi mumkinligi, parollar qanday saqlanishi kerakli
 
 ### OWASP Security Shepherd
 
-**OWASP Security Shepherd** - bu veb va mobil ilovalar xavfsizligini o'rgatish platformasi. Ushbu loyihaning maqsadi AppSec yangi boshlanuvchilari yoki tajribali muhandislarni jalb qilish va ularning penetratsion test ko'nikmalarini xavfsizlik bo'yicha ekspert maqomiga oshirishdir.
+**OWASP Security Shepherd** - bu veb va mobil ilovalar xavfsizligini o'rgatish platformasi. Ushbu loyihaning maqsadi AppSec yangi boshlanuvchilari yoki tajribali muhandislarni jalb qilib, ularning penetratsion test ko'nikmalarini xavfsizlik bo'yicha ekspert maqomiga oshirishdir.
 
 ### OWASP Web Security Testing Guide
 
 **OWASP Web Security Testing Guide** - bu dasturchilar va xavfsizlik mutahasislari uchun dasturiy ta'minotni xavfsizlik tarafdan testlash uchun eng yaxshi qo'llanmani taqdim qiladi.
 
-Davom etadigan bo'lsak OWASPning juda ko'plab loyihalar bor, ammo biz ularni sanashni shu yerda yakunlaymiz. OWASP loyihalari bilan batafsil tanishish uchun https://owasp.org/projects/
+OWASP ishlab chiqgan loyihalar dasturiy ta'minotlar xavfsizligini mustahkamlashda muhim ahamiyat kasb etadi. Davom etadigan bo'lsak OWASPning juda ko'plab loyihalar bor, ammo biz ularni sanashni shu yerda yakunlaymiz. OWASP loyihalari bilan batafsil tanishish uchun https://owasp.org/projects/
 saytiga kiring.
-
-O'ylaymanki bu maqola bilan OWASP COMMUNITY si haqida biroz ma'lumot bera oldim. O'ylaymanki barcha dasturchilar va xavfsizlik mutahasislar OWASP bilan tanish bo'lishsa va u ishlab chiqqan loyihalardan o'z dasturlari xavfsizligini mustahkamlash uchun foydalanishsa maqsadga muvofiq bo'ladi.
 
 _Hozircha shular, xato va kamchiliklar bo'lsa Githubda pull request oching, rahmat!_
