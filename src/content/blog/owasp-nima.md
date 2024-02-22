@@ -1,6 +1,6 @@
 ---
 author: hayot
-pubDatetime: 2024-02-22T12:47:00Z
+pubDatetime: 2024-02-22T13:00:00Z
 title: OWASP nima?
 slug: owasp-nima
 featured: false
@@ -11,6 +11,8 @@ tags:
   - vulnerability
 description: OWASP va uning loyihalari haqida
 ---
+
+Dasturlar xavfsizligini ta'minlash maqsadida juda ko'plab ishlarni amalga oshirayotgan community.
 
 ## OWASP
 
