@@ -21,7 +21,7 @@ OWASP tomonidan ishlab chiqilgan loyihalar, toollar, dokumentatsiyalar, forumlar
 
 ## OWASP Loyihalari
 
-Aytganimizdek OWASP Communitysi juda ko'plab loyihalarni ishlab chiqgan. Siz ham o'z g'oyangizni OWASP orqali ishlab chiqishingiz mumkin. Kelin hozir OWASP tomonidan ishlab chiqilgan ba'zi loyihalar bilan tanishsak.
+Aytganimizdek OWASP Communitysi juda ko'plab loyihalarni ishlab chiqgan. Siz ham o'z g'oyangizni OWASP orqali ishlab chiqishingiz mumkin. Keling hozir OWASP tomonidan ishlab chiqilgan ba'zi loyihalar bilan tanishsak.
 
 ### OWASP TOP TEN
 
