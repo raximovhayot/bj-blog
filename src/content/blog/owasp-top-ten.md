@@ -11,6 +11,7 @@ tags:
   - owasp top ten
   - top ten
   - vulnerability
+  - secure coding
 description: Dasturchilar uchun OWASP Top 10
 ---
 

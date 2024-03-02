@@ -9,6 +9,7 @@ tags:
   - security
   - owasp
   - vulnerability
+  - secure coding
 description: OWASP va uning loyihalari haqida
 ---
 
