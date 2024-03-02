@@ -1,7 +1,7 @@
 ---
 author: Hayot
 pubDatetime: 2024-02-22T1:00:00Z
-title: OWASP nima?
+title: OWASP, Ilova xavfsizligini ta'minlash
 slug: owasp-nima
 featured: false
 draft: false
@@ -28,6 +28,10 @@ Aytganimizdek OWASP Communitysi juda ko'plab loyihalarni ishlab chiqgan. Siz ham
 **OWASP TOP 10** -bu web ilovalar xavfsizligini oshirish maqsadida ishlab chiqilgan loyiha bo'lib, o'zida web ilovalarda eng ko'p uchraydigan 10 turdagi zaifliklarni o'z ichiga olgan.
 Ushbu loyiha OWASPning eng ko'p o'qilgan va foydalaniladigan loyihalardan hisoblanadi.
 **_Ushbu loyiha haqida keyinroq batafsil gaplashamiz_**
+
+### OWASP ZAP
+
+**OWASP ZAP** - veb-ilovalardagi zaifliklarni aniqlaydigan bepul va ochiq manbali veb-ilovalar xavfsizligi skaneri.
 
 ### OWASP Application Security Verification Standard
 
