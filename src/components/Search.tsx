@@ -100,11 +100,11 @@ export default function SearchBar({ searchList }: Props) {
 
       {inputVal.length > 1 && (
         <div className="mt-8">
-          Found {searchResults?.length}
+          '{inputVal}' uchun {searchResults?.length}
           {searchResults?.length && searchResults?.length === 1
-            ? " result"
-            : " results"}{" "}
-          for '{inputVal}'
+            ? " ta natija"
+            : " ta natija"}{" "}
+          topildi
         </div>
       )}
 

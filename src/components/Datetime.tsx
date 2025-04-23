@@ -30,10 +30,10 @@ export default function Datetime({
       </svg>
       {modDatetime ? (
         <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
-          Updated:
+          Yangilangan:
         </span>
       ) : (
-        <span className="sr-only">Published:</span>
+        <span className="sr-only">Chop etilgan:</span>
       )}
       <span className={`italic ${size === "sm" ? "text-sm" : "text-base"}`}>
         <FormattedDatetime
@@ -63,7 +63,7 @@ const FormattedDatetime = ({ pubDatetime, modDatetime }: DatetimesProps) => {
     <>
       <time dateTime={myDatetime.toISOString()}>{date}</time>
       <span aria-hidden="true"> | </span>
-      <span className="sr-only">&nbsp;at&nbsp;</span>
+      <span className="sr-only">&nbsp;soat&nbsp;</span>
       <span className="text-nowrap">{time}</span>
     </>
   );
