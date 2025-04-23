@@ -4,10 +4,18 @@ export interface Props {
   seriesName: string;
   title?: string;
   description?: string;
+  postCount?: number;
   size?: "sm" | "lg";
 }
 
-const { series, seriesName, title, description, size = "sm" } = Astro.props;
+const {
+  series,
+  seriesName,
+  title,
+  description,
+  postCount,
+  size = "sm",
+} = Astro.props;
 ---
 
 <li
@@ -15,29 +23,34 @@ const { series, seriesName, title, description, size = "sm" } = Astro.props;
     size === "sm" ? "my-1 underline-offset-4" : "my-3 mx-1 underline-offset-8"
   }`}
 >
-  <a
-    href={`/series/${series}/`}
-    transition:name={series}
-    class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group`}
-  >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class={`${size === "sm" ? " scale-75" : "scale-110"}`}
-      viewBox="0 0 24 24"
-      ><path
-        d="M19 2H9c-1.103 0-2 .897-2 2v5.586l-4.707 4.707A1 1 0 0 0 3 16v5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2zm-8 18H5v-5.586l3-3 3 3V20zm8 0h-6v-4a.999.999 0 0 0 .707-1.707L9 9.586V4h10v16z"
-      ></path>
-    </svg>
-    &nbsp;<span>{title || seriesName}</span>
-  </a>
+  <div class="flex items-center">
+    <a
+      href={`/series/${series}/`}
+      transition:name={series}
+      class={`${size === "sm" ? "text-sm" : "text-lg"} pr-2 group series-link`}
+    >
+      <span>{title || seriesName}</span>
+    </a>
+    {
+      postCount !== undefined && (
+        <span class="ml-2 rounded-full bg-skin-accent px-2 py-0.5 text-xs text-skin-inverted">
+          {postCount} post{postCount !== 1 ? "s" : ""}
+        </span>
+      )
+    }
+  </div>
   {description && <p class="mt-1 text-sm text-gray-500">{description}</p>}
 </li>
 
 <style>
-  a {
-    @apply relative underline decoration-dashed hover:-top-0.5 hover:text-skin-accent focus-visible:p-1;
+  .series-link {
+    @apply relative font-medium text-skin-accent no-underline hover:text-skin-accent hover:underline focus-visible:p-1;
+    transition:
+      color 0.2s ease,
+      transform 0.2s ease;
   }
-  a svg {
-    @apply -mr-5 h-6 w-6 scale-95 text-skin-base opacity-80 group-hover:fill-skin-accent;
+
+  .series-link:hover {
+    transform: translateY(-2px);
   }
 </style>

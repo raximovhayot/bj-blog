@@ -7,12 +7,15 @@ interface Series {
   seriesName: string;
   title?: string;
   description?: string;
+  postCount: number;
 }
 
 const getUniqueSeries = (posts: CollectionEntry<"blog">[]) => {
-  const seriesArray: Series[] = posts
+  const filteredPosts = posts
     .filter(postFilter)
-    .filter(post => post.data.series) // Only include posts that have series data
+    .filter(post => post.data.series);
+
+  const seriesArray: Series[] = filteredPosts
     .map(post => ({
       series: slugifyStr(post.data.series!.name),
       seriesName: post.data.series!.name,
@@ -23,7 +26,19 @@ const getUniqueSeries = (posts: CollectionEntry<"blog">[]) => {
       (value, index, self) =>
         self.findIndex(series => series.series === value.series) === index
     )
+    .map(seriesItem => {
+      // Count posts for this series
+      const count = filteredPosts.filter(
+        post => slugifyStr(post.data.series!.name) === seriesItem.series
+      ).length;
+
+      return {
+        ...seriesItem,
+        postCount: count,
+      };
+    })
     .sort((seriesA, seriesB) => seriesA.series.localeCompare(seriesB.series));
+
   return seriesArray;
 };
 

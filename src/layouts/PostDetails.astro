@@ -100,25 +100,40 @@ const layoutProps = {
 
     {
       series && seriesPosts.length > 1 && (
-        <div class="series-container my-8 rounded-lg border border-skin-line bg-skin-card p-4">
-          <h2 class="text-xl font-semibold">{series.name} seriyasi</h2>
-          <p class="mb-4 mt-1 text-sm">
+        <div class="series-container my-8 rounded-lg border border-skin-line bg-skin-card p-6">
+          <div class="flex items-center mb-2">
+            <a
+              href={`/series/${slugifyStr(series.name)}/`}
+              class="text-xl font-semibold text-skin-accent hover:underline transition-colors duration-200"
+            >
+              {series.title || series.name}
+            </a>
+            <span class="ml-3 rounded-full bg-skin-accent px-2 py-0.5 text-xs text-skin-inverted">
+              {seriesPosts.length} post{seriesPosts.length !== 1 ? "s" : ""}
+            </span>
+          </div>
+          <p class="mb-4 text-sm text-skin-base opacity-90">
             Bu maqola {seriesPosts.length} qismli seriyaning {series.order}
             -qismi
           </p>
-          <ul class="series-posts">
+          <ul class="series-posts space-y-2">
             {seriesPosts.map((seriesPost, index) => (
               <li
-                class={`mb-2 ml-4 ${seriesPost.slug === post.slug ? "font-bold" : ""}`}
+                class={`ml-4 transition-colors duration-200 ${
+                  seriesPost.slug === post.slug
+                    ? "font-bold text-skin-accent"
+                    : "text-skin-base hover:text-skin-accent"
+                }`}
               >
                 {seriesPost.slug === post.slug ? (
                   <span>
-                    {index + 1}. {seriesPost.data.title} (joriy maqola)
+                    {index + 1}. {seriesPost.data.title}{" "}
+                    <span class="text-xs italic">(joriy maqola)</span>
                   </span>
                 ) : (
                   <a
                     href={`/posts/${seriesPost.slug}/`}
-                    class="hover:text-skin-accent"
+                    class="hover:underline"
                   >
                     {index + 1}. {seriesPost.data.title}
                   </a>

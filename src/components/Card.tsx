@@ -30,9 +30,12 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
       <div className="flex items-center gap-2">
         <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
         {series && (
-          <span className="rounded-md bg-skin-card px-2 py-1 text-xs text-skin-accent">
+          <a
+            href={`/series/${slugifyStr(series.name)}/`}
+            className="rounded-full bg-skin-accent px-2 py-0.5 text-xs text-skin-inverted hover:bg-skin-accent-hover transition-colors duration-200"
+          >
             {series.name} #{series.order}
-          </span>
+          </a>
         )}
       </div>
       <p>{description}</p>
