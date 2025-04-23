@@ -13,6 +13,9 @@ tags:
   - vulnerability
   - secure coding
 description: Dasturchilar uchun OWASP Top 10
+series:
+  name: "OWASP"
+  order: 2
 ---
 
 Ilovalarni ishlab chiqishning qizg'in davrida xavfsizlik ko'pincha tezlik va funksionallik sababli qurbon qilinadi, ya'ni unga ko'p e'tibor berilmaydi.

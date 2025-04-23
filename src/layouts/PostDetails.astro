@@ -9,6 +9,7 @@ import { slugifyStr } from "@utils/slugify";
 import ShareLinks from "@components/ShareLinks.astro";
 import { SITE } from "@config";
 import Author from "../components/Author.astro";
+import { getCollection } from "astro:content";
 
 export interface Props {
   post: CollectionEntry<"blog">;
@@ -25,7 +26,21 @@ const {
   pubDatetime,
   modDatetime,
   tags,
+  series,
 } = post.data;
+
+// Get series posts if this post is part of a series
+let seriesPosts: CollectionEntry<"blog">[] = [];
+if (series) {
+  const allPosts = await getCollection("blog", ({ data }) => !data.draft);
+  seriesPosts = allPosts
+    .filter(p => p.data.series && p.data.series.name === series.name)
+    .sort((a, b) => {
+      const orderA = a.data.series?.order || 0;
+      const orderB = b.data.series?.order || 0;
+      return orderA - orderB;
+    });
+}
 
 const { Content } = await post.render();
 
@@ -82,6 +97,38 @@ const layoutProps = {
         Hozircha shu, xato va kamchiliklar bo'lsa Githubda pull request oching!
       </p>
     </article>
+
+    {
+      series && seriesPosts.length > 1 && (
+        <div class="series-container my-8 rounded-lg border border-skin-line bg-skin-card p-4">
+          <h2 class="text-xl font-semibold">{series.name} seriyasi</h2>
+          <p class="mb-4 mt-1 text-sm">
+            Bu maqola {seriesPosts.length} qismli seriyaning {series.order}
+            -qismi
+          </p>
+          <ul class="series-posts">
+            {seriesPosts.map((seriesPost, index) => (
+              <li
+                class={`mb-2 ml-4 ${seriesPost.slug === post.slug ? "font-bold" : ""}`}
+              >
+                {seriesPost.slug === post.slug ? (
+                  <span>
+                    {index + 1}. {seriesPost.data.title} (joriy maqola)
+                  </span>
+                ) : (
+                  <a
+                    href={`/posts/${seriesPost.slug}/`}
+                    class="hover:text-skin-accent"
+                  >
+                    {index + 1}. {seriesPost.data.title}
+                  </a>
+                )}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )
+    }
 
     <ul class="my-8">
       {tags.map(tag => <Tag tag={slugifyStr(tag)} />)}

@@ -11,6 +11,9 @@ tags:
   - vulnerability
   - secure coding
 description: OWASP va uning loyihalari haqida
+series:
+  name: "OWASP"
+  order: 1
 ---
 
 Dasturlar xavfsizligini ta'minlash maqsadida juda ko'plab ishlarni amalga oshirayotgan community.

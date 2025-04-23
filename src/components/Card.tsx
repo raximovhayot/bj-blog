@@ -9,7 +9,7 @@ export interface Props {
 }
 
 export default function Card({ href, frontmatter, secHeading = true }: Props) {
-  const { title, pubDatetime, modDatetime, description } = frontmatter;
+  const { title, pubDatetime, modDatetime, description, series } = frontmatter;
 
   const headerProps = {
     style: { viewTransitionName: slugifyStr(title) },
@@ -28,6 +28,13 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
         )}
       </a>
       <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
+      {series && (
+        <div className="mt-1 flex items-center">
+          <span className="mr-2 rounded-md bg-skin-card px-2 py-1 text-xs text-skin-accent">
+            {series.name} #{series.order}
+          </span>
+        </div>
+      )}
       <p>{description}</p>
     </li>
   );

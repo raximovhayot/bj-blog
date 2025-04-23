@@ -70,6 +70,9 @@ tags:
   - tag1
   - tag2
 description: A brief description of your article (required for SEO)
+series:  # Optional, for posts that are part of a series
+  name: "Series Name"  # Name of the series
+  order: 1  # Order of this post in the series (1, 2, 3, etc.)
 ---
 ```
 
@@ -88,6 +91,26 @@ description: A brief description of your article (required for SEO)
 | featured | Whether to feature the article on the homepage | No (defaults to false) |
 | draft | Whether the article is a draft | No (defaults to false) |
 | tags | Keywords related to the article | No (defaults to "others") |
+| series | Object containing series information (name and order) | No |
+| series.name | Name of the series this post belongs to | Required if series is used |
+| series.order | Order of this post in the series (1, 2, 3, etc.) | Required if series is used |
+
+### Creating a Series of Posts
+
+To create a series of related posts, add the `series` field to the frontmatter of each post in the series:
+
+```yaml
+series:
+  name: "Your Series Name"  # Use the same name for all posts in the series
+  order: 1  # The order of this post in the series (1, 2, 3, etc.)
+```
+
+Posts in the same series will be:
+- Marked with a series badge in post listings
+- Display a series navigation box at the end of each post
+- Allow readers to easily navigate between posts in the series
+
+Make sure to use the exact same series name for all posts in a series and assign the correct order number to each post.
 
 ### Adding a Table of Contents
 
