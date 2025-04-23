@@ -27,14 +27,14 @@ export default function Card({ href, frontmatter, secHeading = true }: Props) {
           <h3 {...headerProps}>{title}</h3>
         )}
       </a>
-      <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
-      {series && (
-        <div className="mt-1 flex items-center">
-          <span className="mr-2 rounded-md bg-skin-card px-2 py-1 text-xs text-skin-accent">
+      <div className="flex items-center gap-2">
+        <Datetime pubDatetime={pubDatetime} modDatetime={modDatetime} />
+        {series && (
+          <span className="rounded-md bg-skin-card px-2 py-1 text-xs text-skin-accent">
             {series.name} #{series.order}
           </span>
-        </div>
-      )}
+        )}
+      </div>
       <p>{description}</p>
     </li>
   );

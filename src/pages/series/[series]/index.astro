@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import SeriesPosts from "@layouts/SeriesPosts.astro";
+import getPostsBySeries from "@utils/getPostsBySeries";
+import getPagination from "@utils/getPagination";
+import getUniqueSeries from "@utils/getUniqueSeries";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+
+  const seriesList = getUniqueSeries(posts);
+
+  return seriesList.map(({ series, seriesName }) => {
+    return {
+      params: { series },
+      props: { series, seriesName, posts },
+    };
+  });
+}
+
+const { series, seriesName, posts } = Astro.props;
+
+const postsBySeries = getPostsBySeries(posts, series);
+
+const pagination = getPagination({
+  posts: postsBySeries,
+  page: 1,
+  isIndex: true,
+});
+---
+
+<SeriesPosts {...pagination} {series} {seriesName} />

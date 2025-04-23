@@ -1,0 +1,26 @@
+import { slugifyStr } from "./slugify";
+import type { CollectionEntry } from "astro:content";
+import postFilter from "./postFilter";
+
+interface Series {
+  series: string;
+  seriesName: string;
+}
+
+const getUniqueSeries = (posts: CollectionEntry<"blog">[]) => {
+  const seriesArray: Series[] = posts
+    .filter(postFilter)
+    .filter(post => post.data.series) // Only include posts that have series data
+    .map(post => ({
+      series: slugifyStr(post.data.series!.name),
+      seriesName: post.data.series!.name,
+    }))
+    .filter(
+      (value, index, self) =>
+        self.findIndex(series => series.series === value.series) === index
+    )
+    .sort((seriesA, seriesB) => seriesA.series.localeCompare(seriesB.series));
+  return seriesArray;
+};
+
+export default getUniqueSeries;
