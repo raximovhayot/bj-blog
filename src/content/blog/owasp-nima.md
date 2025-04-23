@@ -14,6 +14,8 @@ description: OWASP va uning loyihalari haqida
 series:
   name: "OWASP"
   order: 1
+  title: "OWASP Xavfsizlik Seriyasi"
+  description: "Web ilovalar xavfsizligi va OWASP loyihalari haqida to'liq ma'lumot"
 ---
 
 Dasturlar xavfsizligini ta'minlash maqsadida juda ko'plab ishlarni amalga oshirayotgan community.

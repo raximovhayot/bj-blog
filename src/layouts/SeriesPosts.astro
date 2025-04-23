@@ -14,20 +14,31 @@ export interface Props {
   paginatedPosts: CollectionEntry<"blog">[];
   series: string;
   seriesName: string;
+  title?: string;
+  description?: string;
 }
 
-const { currentPage, totalPages, paginatedPosts, series, seriesName } =
-  Astro.props;
+const {
+  currentPage,
+  totalPages,
+  paginatedPosts,
+  series,
+  seriesName,
+  title,
+  description,
+} = Astro.props;
 ---
 
-<Layout title={`Series: ${seriesName} | ${SITE.title}`}>
+<Layout title={`Series: ${title || seriesName} | ${SITE.title}`}>
   <Header activeNav="series" />
   <Main
-    pageTitle={[`Series:`, `${seriesName}`]}
+    pageTitle={[`Series:`, `${title || seriesName}`]}
     titleTransition={series}
-    pageDesc={`"${seriesName} seriyasidagi barcha maqolalar".`}
+    pageDesc={description || `"${seriesName} seriyasidagi barcha maqolalar".`}
   >
-    <h1 slot="title" transition:name={series}>{`Seriya:${series}`}</h1>
+    <h1 slot="title" transition:name={series}>
+      {`Seriya:${title || seriesName}`}
+    </h1>
     <ul>
       {
         paginatedPosts.map(({ data, slug }) => (

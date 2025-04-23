@@ -10,6 +10,8 @@ export interface Props {
   post: CollectionEntry<"blog">;
   series: string;
   seriesName: string;
+  title?: string;
+  description?: string;
 }
 
 export async function getStaticPaths() {
@@ -17,19 +19,19 @@ export async function getStaticPaths() {
 
   const seriesList = getUniqueSeries(posts);
 
-  return seriesList.flatMap(({ series, seriesName }) => {
+  return seriesList.flatMap(({ series, seriesName, title, description }) => {
     const seriesPosts = getPostsBySeries(posts, series);
     const totalPages = getPageNumbers(seriesPosts.length);
 
     return totalPages.map(page => ({
       params: { series, page },
-      props: { series, seriesName },
+      props: { series, seriesName, title, description },
     }));
   });
 }
 
 const { page } = Astro.params;
-const { series, seriesName } = Astro.props;
+const { series, seriesName, title, description } = Astro.props;
 
 const posts = await getCollection("blog", ({ data }) => !data.draft);
 
@@ -41,4 +43,4 @@ const pagination = getPagination({
 });
 ---
 
-<SeriesPosts {...pagination} {series} {seriesName} />
+<SeriesPosts {...pagination} {series} {seriesName} {title} {description} />

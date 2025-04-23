@@ -5,6 +5,8 @@ import postFilter from "./postFilter";
 interface Series {
   series: string;
   seriesName: string;
+  title?: string;
+  description?: string;
 }
 
 const getUniqueSeries = (posts: CollectionEntry<"blog">[]) => {
@@ -14,6 +16,8 @@ const getUniqueSeries = (posts: CollectionEntry<"blog">[]) => {
     .map(post => ({
       series: slugifyStr(post.data.series!.name),
       seriesName: post.data.series!.name,
+      title: post.data.series!.title,
+      description: post.data.series!.description,
     }))
     .filter(
       (value, index, self) =>

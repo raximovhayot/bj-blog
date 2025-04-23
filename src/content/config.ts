@@ -24,6 +24,8 @@ const blog = defineCollection({
         .object({
           name: z.string(),
           order: z.number(),
+          title: z.string().optional(),
+          description: z.string().optional(),
         })
         .optional(),
     }),

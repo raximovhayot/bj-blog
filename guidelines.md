@@ -94,6 +94,8 @@ series:  # Optional, for posts that are part of a series
 | series | Object containing series information (name and order) | No |
 | series.name | Name of the series this post belongs to | Required if series is used |
 | series.order | Order of this post in the series (1, 2, 3, etc.) | Required if series is used |
+| series.title | Title of the series (for display purposes) | Optional |
+| series.description | Description of the series | Optional |
 
 ### Creating a Series of Posts
 
@@ -103,6 +105,8 @@ To create a series of related posts, add the `series` field to the frontmatter o
 series:
   name: "Your Series Name"  # Use the same name for all posts in the series
   order: 1  # The order of this post in the series (1, 2, 3, etc.)
+  title: "Display Title for Your Series"  # Optional, for display purposes
+  description: "A brief description of what this series covers"  # Optional
 ```
 
 Posts in the same series will be:

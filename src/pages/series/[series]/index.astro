@@ -10,15 +10,15 @@ export async function getStaticPaths() {
 
   const seriesList = getUniqueSeries(posts);
 
-  return seriesList.map(({ series, seriesName }) => {
+  return seriesList.map(({ series, seriesName, title, description }) => {
     return {
       params: { series },
-      props: { series, seriesName, posts },
+      props: { series, seriesName, title, description, posts },
     };
   });
 }
 
-const { series, seriesName, posts } = Astro.props;
+const { series, seriesName, title, description, posts } = Astro.props;
 
 const postsBySeries = getPostsBySeries(posts, series);
 
@@ -29,4 +29,4 @@ const pagination = getPagination({
 });
 ---
 
-<SeriesPosts {...pagination} {series} {seriesName} />
+<SeriesPosts {...pagination} {series} {seriesName} {title} {description} />

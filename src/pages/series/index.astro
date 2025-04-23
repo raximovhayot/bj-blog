@@ -18,8 +18,8 @@ let seriesList = getUniqueSeries(posts);
   <Main pageTitle="Seriyalar" pageDesc="Maqolalar seriyalari">
     <ul>
       {
-        seriesList.map(({ series, seriesName }) => (
-          <Series {series} {seriesName} size="lg" />
+        seriesList.map(({ series, seriesName, title, description }) => (
+          <Series {series} {seriesName} {title} {description} size="lg" />
         ))
       }
     </ul>
