@@ -10,7 +10,7 @@ import { SITE } from "@config";
 
 const posts = await getCollection("blog");
 
-let seriesList = getUniqueSeries(posts);
+let seriesList = await getUniqueSeries(posts);
 ---
 
 <Layout title={`Series | ${SITE.title}`}>

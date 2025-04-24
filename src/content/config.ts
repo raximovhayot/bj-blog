@@ -24,11 +24,19 @@ const blog = defineCollection({
         .object({
           name: z.string(),
           order: z.number(),
-          title: z.string().optional(),
-          description: z.string().optional(),
         })
         .optional(),
     }),
 });
 
-export const collections = { blog };
+const series = defineCollection({
+  type: "content",
+  schema: z.object({
+    name: z.string(),
+    order: z.number(),
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { blog, series };

@@ -8,7 +8,7 @@ import getUniqueSeries from "@utils/getUniqueSeries";
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
 
-  const seriesList = getUniqueSeries(posts);
+  const seriesList = await getUniqueSeries(posts);
 
   return seriesList.map(({ series, seriesName, title, description }) => {
     return {

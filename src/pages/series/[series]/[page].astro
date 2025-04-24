@@ -17,7 +17,7 @@ export interface Props {
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
 
-  const seriesList = getUniqueSeries(posts);
+  const seriesList = await getUniqueSeries(posts);
 
   return seriesList.flatMap(({ series, seriesName, title, description }) => {
     const seriesPosts = getPostsBySeries(posts, series);
